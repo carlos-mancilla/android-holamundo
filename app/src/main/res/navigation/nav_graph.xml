@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/parksHome">
+
+    <fragment
+        android:id="@+id/parksHome"
+        android:name="com.example.holamundo.activities.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_parksFragment"
+            app:destination="@id/parksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/parksFragment"
+        android:name="com.example.holamundo.activities.ParksFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_parks">
+
+        <action
+            android:id="@+id/action_parksFragment_to_parksDetailFragment"
+            app:destination="@id/parksDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/parksDetailFragment"
+        android:name="com.example.holamundo.activities.ParksDetailFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_parks_detail">
+
+        <argument
+            android:name="parkName"
+            android:defaultValue="None"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>
