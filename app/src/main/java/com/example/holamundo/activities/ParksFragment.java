@@ -30,6 +30,7 @@ public class ParksFragment extends Fragment implements ParkAdapter.ParkAdapterOn
 
     public ParksFragment() {
         // Se requiere un constructor vacío.
+        // agregamos un comentario para hacer un commit en nuestro repo
     }
 
     @Override
